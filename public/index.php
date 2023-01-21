@@ -1,35 +1,12 @@
 <?php
 
-function show($stuff)
-{
-    echo "<pre>";
-    print_r($stuff);
-    echo "</pre>";
-}
+session_start();
 
-// show($_GET);
-function splitURL()
-{
-    $URL = $_GET['url'] ?? 'home';
-    $URL = explode("/", $URL);
-    return $URL;
+// 加载文件
+require "../app/core/init.php";
 
-}
-// show($URL);
-
-function loadController()
-{
-    $URL = splitURL();
-    $filename = "../app/controllers/".ucfirst($URL[0]).".php";
-    if(file_exists($filename))
-    {
-        require $filename;
-    }else{
-        // echo "controller not found";
-        $filename = "../app/controllers/_404.php";
-        require $filename;
-    }
-}
+// 初始化 App 实例
+$app = new App;
+$app->loadController();
 
 
-loadController();

@@ -1,3 +1,6 @@
+## 
+- 在 PHP 中 first cityzen 是 object function 还是 class
+
 
 ### htaccess 文件配置
 Apache httpd 配置转发 RewriteEngine
@@ -21,6 +24,7 @@ Disallow: /ajax/
 ```
 ### index.php
 
+在 index.php 定义一个调试方法 `show` 用于调试，在浏览器中显示内容
 ```php
 <?php
 
@@ -44,3 +48,9 @@ Array
     [url] => 1233/123
 )
 ```
+
+### core 
+#### config
+关于应用的一些配置、例如数据库配置等
+#### init
+加载 php 文件，例如 python 中 init.py 在这个文件夹中引入项目的依赖文件
