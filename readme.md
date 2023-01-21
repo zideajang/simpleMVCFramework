@@ -54,3 +54,10 @@ Array
 关于应用的一些配置、例如数据库配置等
 #### init
 加载 php 文件，例如 python 中 init.py 在这个文件夹中引入项目的依赖文件
+
+
+
+### TODO
+- 采用 precompiled 预防 query 被注入攻击
+- 了解一下 MVCS 设计模式
+- 参考 land-pg 库
