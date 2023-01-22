@@ -14,3 +14,8 @@ if($_SERVER['SERVER_NAME'] == 'localhost'){
     define('DBDRIVER', '');
     define('ROOT', 'https://www.publishsite.com');
 }
+
+define('APP_NAME','simple mvc app');
+define('APP_DESC', 'a simple mvc app');
+
+define('DEBUG', true);

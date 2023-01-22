@@ -1,6 +1,8 @@
 <?php
-class Home extends Controller
+class Home 
 {
+    //实现 Trait
+    use Controller;
     public function index($a='',$b='',$c='')
     {
 
@@ -10,11 +12,19 @@ class Home extends Controller
         // $arr['name'] = 'alice';
         // $arr['password'] = 'alice123';
 
-        $result = $userModel->getAll();
+        // $result = $userModel->getAll();
         // $result = $model->insert($arr);
-        show($result);
+        // show($a);
+        // show($b);
+        // show($c);
         // echo "This is the home controller";
 
+        $this->view('home');
+    }
+
+    public function edit($a = '', $b='', $c='')
+    {
+        show("from edit funciton");
         $this->view('home');
     }
 
